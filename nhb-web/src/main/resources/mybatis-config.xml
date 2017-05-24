@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<settings>
+		<setting name="jdbcTypeForNull" value="OTHER" />
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias alias="Langtext"
+			type="com.nhb.domain.dictionary.Langtext" />
+		<typeAlias alias="LangtextRq"
+			type="com.nhb.domain.dictionary.LangtextRq" />
+		<typeAlias alias="Session" type="com.nhb.domain.user.Session" />
+		<typeAlias alias="Useracc" type="com.nhb.domain.user.Useracc" />
+		
+		
+		<typeAlias alias="SearchResult" type="com.nhb.domain.search.SearchResult" />
+		
+		
+		<typeAlias alias="Image" type="com.nhb.domain.image.Image" />
+		<typeAlias alias="Comment" type="com.nhb.domain.comment.Comment" />
+
+		
+		<typeAlias alias="Tag" type="com.nhb.domain.tag.Tag" />
+		<typeAlias alias="Subscription" type="com.nhb.domain.user.Subscription" />
+		
+		<!-- my placc types -->
+		<typeAlias alias="Company" type="com.nhb.domain.company.Company" />
+		<typeAlias alias="Building" type="com.nhb.domain.company.Building" />
+		<typeAlias alias="Level" type="com.nhb.domain.company.Level" />
+		<typeAlias alias="Seat" type="com.nhb.domain.company.Seat" />
+		<typeAlias alias="Reservation" type="com.nhb.domain.reservation.Reservation" />
+		
+		
+			
+		<!--  filter types -->
+		
+	</typeAliases>
+
+
+	<typeHandlers>
+		<package name="com.manniwood.mmpt.typehandlers" />
+	</typeHandlers>
+
+	<plugins>
+		<plugin interceptor="com.nhb.service.impl.MyBatisQueryInterceptor" />
+	</plugins>
+
+
+	<!-- <mappers> <mapper resource="eu/dorsum/webtrader/domain/mybatis/ClientService.xml" 
+		/> </mappers> -->
+
+</configuration>
+
